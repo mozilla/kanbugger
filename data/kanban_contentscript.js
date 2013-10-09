@@ -1,5 +1,5 @@
 var project_id = window.location.pathname.match(/^.+?projects\/(\d+)\//)[1];
-var kb_workspace = 'mozilla';
+var kb_workspace = window.location.hostname.match(/^(\w+?)\..+$/)[1];
 var columns;
 
 // get column data

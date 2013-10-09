@@ -1,14 +1,14 @@
 {
     "license": "MPL 2.0",
-    "description": "An add-on to share data between kanbanery and bugzilla.",
+    "description": "Helps keep bugzilla.mozilla.org bugs synchronized with kanbanery.com cards using whiteboard tags and one-click card creation.",
     "contributors": [
         "Paul McLanahan <pmac@mclanahan.net>",
         "Justin Crawford <justin@tentacu.com>"
     ],
     "author": "Andrei Hajdukewycz <sancus@off.net>",
-    "url": "https://github.com/Sancus/kanbugger",
+    "url": "https://github.com/mozilla/kanbugger",
     "dependencies": ["api-utils", "addon-kit"],
-    "version": "0.3.0",
+    "version": "0.3.1",
     "lib": "lib", 
     "fullName": "Kanbugger",
     "main": "kanbugger",
