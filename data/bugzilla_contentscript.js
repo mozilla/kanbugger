@@ -1,5 +1,4 @@
 var kbAPIKeyName = 'kbAPIKey';
-var kbWorkspace = 'mozilla';
 var addon_self = self;
 
 var config = self.options.config;
@@ -61,7 +60,7 @@ function isLoggedIn() {
     }
 }
 
-function makeKanCard(e, kbProjectId) {
+function makeKanCard(e, kbProjectId, kbWorkspace) {
     e.preventDefault();
     var apiKey = getApiKey();
     if (apiKey && isLoggedIn()) {
@@ -69,7 +68,6 @@ function makeKanCard(e, kbProjectId) {
                      '.kanbanery.com/api/v1/projects/' +
                      kbProjectId + '/icebox/tasks.json';
         var cardData = {
-            'task[task_type_name]': 'Story',
             'task[title]': $('#short_desc_nonedit_display').text(),
             'task[description]': document.location.href
         };
@@ -82,7 +80,7 @@ function makeKanCard(e, kbProjectId) {
     }
 }
 
-function getKanCard(e, cardId) {
+function getKanCard(e, cardId, kbWorkspace) {
     e.preventDefault();
     var apiKey = getApiKey();
     if (apiKey) {
@@ -104,20 +102,26 @@ addon_self.port.on('updateBug', function(json) {
     $('#commit').click();
 });
 
+// Register a listener to alert with generic errors
+addon_self.port.on('raise', function(message) {
+    alert(message);
+});
+
 for (let i of config.mapping) {
     if ( getProduct() === i.bzProduct ) {
         if (getComponent() === i.bzComponent || i.bzComponent === "") {
             var cardId = getCardId();
-            var projectId = i.kanProjectId;
+            var projectId = i.kbProjectId;
+            var workspace = i.kbWorkspace;
             var $button = $('<a id="kanbutton" href="#"><span></span></a>');
             $button.insertAfter('#summary_alias_container');
             if (cardId) {
               console.log("Kanban card found -- ID: " + cardId);
-              $button.on('click', function (e) { getKanCard(e, cardId); })
+              $button.on('click', function (e) { getKanCard(e, cardId, workspace); })
             }
             else {
               console.log("No Kanban card found.");
-              $button.on('click', function (e) { makeKanCard(e, projectId); })
+              $button.on('click', function (e) { makeKanCard(e, projectId, workspace); })
             }
         }
     }

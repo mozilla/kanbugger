@@ -3,27 +3,38 @@
         {
             "bzProduct": "www.mozilla.org",
             "bzComponent": "",
-            "kanProjectId": 33256
+            "kbWorkspace": "mozilla",
+            "kbProjectId": 33256
         },
         {
             "bzProduct": "Snippets",
             "bzComponent": "Service",
-            "kanProjectId": 35613
+            "kbWorkspace": "mozilla",
+            "kbProjectId": 35613
         },
         {
             "bzProduct": "Mozilla Reps",
             "bzComponent": "reps.mozilla.org",
-            "kanProjectId": 28874
+            "kbWorkspace": "mozilla",
+            "kbProjectId": 28874
         },
         {
             "bzProduct": "Community Tools",
             "bzComponent": "Phonebook",
-            "kanProjectId": 23282
+            "kbWorkspace": "mozilla",
+            "kbProjectId": 23282
+        },
+        {
+            "bzProduct": "Mozilla Developer Network",
+            "bzComponent": "",
+            "kbWorkspace": "mdn",
+            "kbProjectId": 32137
         },
         {
             "bzProduct": "Websites",
             "bzComponent": "Firefox Flicks",
-            "kanProjectId": 28280
+            "kbWorkspace": "mozilla",
+            "kbProjectId": 28280
         }
     ]
 }
