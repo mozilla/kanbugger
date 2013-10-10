@@ -32,6 +32,12 @@
         },
         {
             "bzProduct": "Websites",
+            "bzComponent": "Nucleus",
+            "kbWorkspace": "mozilla",
+            "kbProjectId": 35638
+        },
+        {
+            "bzProduct": "Websites",
             "bzComponent": "Firefox Flicks",
             "kbWorkspace": "mozilla",
             "kbProjectId": 28280
