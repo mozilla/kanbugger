@@ -32,6 +32,12 @@
         },
         {
             "bzProduct": "Websites",
+            "bzComponent": "Tabzilla",
+            "kbWorkspace": "mozilla",
+            "kbProjectId": 33256
+        },
+        {
+            "bzProduct": "Websites",
             "bzComponent": "Nucleus",
             "kbWorkspace": "mozilla",
             "kbProjectId": 35638
