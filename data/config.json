@@ -53,6 +53,12 @@
             "bzComponent": "Firefox Flicks",
             "kbWorkspace": "mozilla",
             "kbProjectId": 28280
+        },
+        {
+            "bzProduct": "Websites",
+            "bzComponent": "Shape of the Web",
+            "kbWorkspace": "mozilla",
+            "kbProjectId": 56666
         }
     ]
 }
